@@ -1,10 +1,10 @@
 cask "chestnut" do
-  version "0.1.0"
-  sha256 "244de3afab0b0a714fdd3110517351562dca4fd83bd1184d326c685e31a1540e"
+  version "0.2.0"
+  sha256 "520602e96b08ffe629f23f8df45546eda5cae22735a86e4c68d880f3ad4880f9"
 
   url "https://github.com/gapmiss/chestnut/releases/download/v#{version}/Chestnut.dmg"
   name "Chestnut"
-  desc "Pixel-art desktop companion for multi-vault Obsidian users"
+  desc "Pixel-art desktop companion for Obsidian users"
   homepage "https://github.com/gapmiss/chestnut"
 
   app "Chestnut.app"
