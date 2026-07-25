@@ -13,6 +13,10 @@ cask "chestnut" do
     Chestnut is not notarized. If macOS blocks the first launch, allow it in
     System Settings → Privacy & Security → "Open Anyway", or install with:
       brew install --cask --no-quarantine chestnut
+
+    "brew upgrade" does not carry --no-quarantine forward, so a blocked launch
+    can come back after upgrading. To clear it:
+      xattr -dr com.apple.quarantine /Applications/Chestnut.app
   EOS
 
   zap trash: "~/Library/Application Support/Chestnut"
