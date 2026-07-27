@@ -1,6 +1,6 @@
 cask "chestnut" do
-  version "0.4.0"
-  sha256 "b07331c558aadab525e4c0c22f49d332d6c740e8dc0ab37cce586ca884117d64"
+  version "0.5.0"
+  sha256 "a75d9dee0a6bdb0a70e343d8f3f1ed08fad4456624a3d6877d24a188a5969f47"
 
   url "https://github.com/gapmiss/chestnut/releases/download/v#{version}/Chestnut.dmg"
   name "Chestnut"
@@ -11,12 +11,12 @@ cask "chestnut" do
 
   caveats <<~EOS
     Chestnut is not notarized. If macOS blocks the first launch, allow it in
-    System Settings → Privacy & Security → "Open Anyway", or install with:
-      brew install --cask --no-quarantine chestnut
-
-    "brew upgrade" does not carry --no-quarantine forward, so a blocked launch
-    can come back after upgrading. To clear it:
+    System Settings → Privacy & Security → "Open Anyway", or clear the
+    quarantine flag:
       xattr -dr com.apple.quarantine /Applications/Chestnut.app
+
+    A blocked launch comes back after "brew upgrade", since the new copy is
+    quarantined too. Run the same command again.
   EOS
 
   zap trash: "~/Library/Application Support/Chestnut"
