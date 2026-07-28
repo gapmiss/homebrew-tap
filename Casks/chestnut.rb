@@ -15,8 +15,8 @@ cask "chestnut" do
     quarantine flag:
       xattr -dr com.apple.quarantine /Applications/Chestnut.app
 
-    A blocked launch comes back after "brew upgrade", since the new copy is
-    quarantined too. Run the same command again.
+    Whether a later "brew upgrade" asks again varies by macOS version. If it
+    does, the same fix applies.
   EOS
 
   zap trash: "~/Library/Application Support/Chestnut"
