@@ -1,6 +1,6 @@
 cask "chestnut" do
-  version "0.6.2"
-  sha256 "457820d3b3bb3a0c22bab8ad4e09354becb21c278e440636e2b0651ef1534695"
+  version "0.7.0"
+  sha256 "4f49853c92cff8f0f296d47d1c886d9000a2ba26c248fe9770452e624c3fbbf4"
 
   url "https://github.com/gapmiss/chestnut/releases/download/v#{version}/Chestnut.dmg"
   name "Chestnut"
