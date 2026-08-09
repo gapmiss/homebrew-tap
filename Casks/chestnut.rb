@@ -15,8 +15,10 @@ cask "chestnut" do
     quarantine flag:
       xattr -dr com.apple.quarantine /Applications/Chestnut.app
 
-    Whether a later "brew upgrade" asks again varies by macOS version. If it
-    does, the same fix applies.
+    A later "brew upgrade" does not ask again at the time. The first restart
+    after an upgrade may ask once, with a "Chestnut.app Not Opened" dialog:
+    click Done, then use "Open Anyway" again. Do not click "Move to Trash",
+    which deletes the app. Restarts with no upgrade in between do not ask.
   EOS
 
   zap trash: "~/Library/Application Support/Chestnut"
