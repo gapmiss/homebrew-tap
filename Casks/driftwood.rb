@@ -1,6 +1,6 @@
 cask "driftwood" do
-  version "0.1.0"
-  sha256 "82bd41f9d25a889870318ce883f3c584b1282b5647f4f15835720a8e1a59bb40"
+  version "0.2.0"
+  sha256 "199c1603f23ef03524043d77a3d0150ca39740222f11c0844a45727dde0ebada"
 
   url "https://github.com/gapmiss/driftwood/releases/download/v#{version}/Driftwood.dmg"
   name "Driftwood"
