@@ -7,7 +7,7 @@ cask "driftwood" do
   desc "Floating terminal panel for macOS"
   homepage "https://github.com/gapmiss/driftwood"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Driftwood.app"
 
