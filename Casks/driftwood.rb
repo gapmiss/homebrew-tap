@@ -4,12 +4,17 @@ cask "driftwood" do
 
   url "https://github.com/gapmiss/driftwood/releases/download/v#{version}/Driftwood.dmg"
   name "Driftwood"
-  desc "Floating terminal panel for macOS"
+  desc "Floating, always-on-top terminal panel with tabs and global hotkeys"
   homepage "https://github.com/gapmiss/driftwood"
 
   depends_on macos: :sonoma
 
   app "Driftwood.app"
+
+  zap trash: [
+    "~/Library/Application Support/Driftwood",
+    "~/Library/Logs/Driftwood",
+  ]
 
   caveats <<~EOS
     Driftwood has no Dock icon and no menu bar item, so nothing on screen says
@@ -26,9 +31,4 @@ cask "driftwood" do
     outlives the app bundle, so removing the app first leaves a login item
     pointing at nothing.
   EOS
-
-  zap trash: [
-    "~/Library/Application Support/Driftwood",
-    "~/Library/Logs/Driftwood",
-  ]
 end
