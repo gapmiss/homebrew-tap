@@ -7,6 +7,8 @@ cask "chestnut" do
   desc "Pixel-art desktop companion for Obsidian users"
   homepage "https://github.com/gapmiss/chestnut"
 
+  depends_on macos: :sonoma
+
   app "Chestnut.app"
 
   caveats <<~EOS
